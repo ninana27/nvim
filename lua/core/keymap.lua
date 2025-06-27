@@ -8,6 +8,6 @@ vim.keymap.set( "n", "<leader>wk", "<C-w>k", { silent = true } )
 vim.keymap.set( "n", "<leader>wl", "<C-w>l", { silent = true } )
 
 -- terminal
-vim.keymap.set( "n", "<C-\\>", ":vsplit | terminal<CR>a", { silent = true } )
+-- vim.keymap.set( "n", "<C-\\>", ":vsplit | terminal<CR>a", { silent = true } )
 vim.keymap.set( "t", "<Esc>", "<C-\\><C-n>", { silent = true } )
-vim.keymap.set( "t", "<A-b>d", "<C-\\><C-n>:bdelete!<CR>", { silent = true } )
+-- vim.keymap.set( "t", "<A-b>d", "<C-\\><C-n>:bdelete!<CR>", { silent = true } )

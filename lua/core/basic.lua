@@ -20,5 +20,3 @@ vim.opt.hlsearch = false
 vim.opt.showmode = false
 
 vim.opt.clipboard = "unnamedplus"
-
-vim.o.shell = "pwsh.exe"
