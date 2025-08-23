@@ -11,3 +11,11 @@ vim.keymap.set( "n", "<leader>wl", "<C-w>l", { silent = true } )
 -- vim.keymap.set( "n", "<C-\\>", ":vsplit | terminal<CR>a", { silent = true } )
 vim.keymap.set( "t", "<Esc>", "<C-\\><C-n>", { silent = true } )
 -- vim.keymap.set( "t", "<A-b>d", "<C-\\><C-n>:bdelete!<CR>", { silent = true } )
+
+vim.keymap.set({"i", "t"}, "<A-h>", "<Left>", { silent = true })
+vim.keymap.set({"i", "t"}, "<A-l>", "<Right>", { silent = true })
+vim.keymap.set({"i", "t"}, "<A-j>", "<Down>", { silent = true })
+vim.keymap.set({"i", "t"}, "<A-k>", "<Up>", { silent = true })
+
+vim.keymap.set("n", "<C-j>", "7j", { silent = true })
+vim.keymap.set("n", "<C-k>", "7k", { silent = true })
