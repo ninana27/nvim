@@ -22,7 +22,9 @@ return {
 				client.server_capabilities.documentFormattingProvider = false
 				client.server_capabilities.documentRangeFormattingProvider = false
 			end
-			require("lspconfig")[nvim_lsp].setup(config)
+			-- require("lspconfig")[nvim_lsp].setup(config)
+            vim.lsp.config(name, config);
+            vim.lsp.enable(name);
 		end
 
 		local servers = {

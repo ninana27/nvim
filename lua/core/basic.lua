@@ -21,6 +21,8 @@ vim.opt.showmode = false
 
 vim.opt.clipboard = "unnamedplus"
 
+vim.o.signcolumn = "yes"
+
 local is_wsl = false
 if vim.fn.has("unix") == 1 then
 	local f = io.open("/proc/version", "r")
