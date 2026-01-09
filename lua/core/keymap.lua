@@ -20,3 +20,9 @@ vim.keymap.set({"i", "t"}, "<A-k>", "<Up>", { silent = true })
 
 vim.keymap.set("n", "<C-j>", "7j", { silent = true })
 vim.keymap.set("n", "<C-k>", "7k", { silent = true })
+
+-- Disable arrow keys
+vim.keymap.set({ "n", "i" }, "<Up>", "<NOP>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "i" }, "<Down>", "<NOP>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "i" }, "<Left>", "<NOP>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "i" }, "<Right>", "<NOP>", { noremap = true, silent = true })
