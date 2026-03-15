@@ -3,7 +3,7 @@ return {
 	event = "VeryLazy",
 	main = "nvim-treesitter.configs",
 	opts = {
-		ensure_installed = { "lua", "toml", "rust", "ron" },
+		ensure_installed = { "c", "cpp", "cmake", "lua", "make", "toml", "rust", "ron" },
 		highlight = { enable = true },
 	},
 }
