@@ -1,0 +1,46 @@
+local map = vim.keymap.set
+local opts = { silent = true, noremap = true }
+
+-- Vim training mode.
+for _, key in ipairs({ "<Up>", "<Down>", "<Left>", "<Right>" }) do
+	map({ "n", "i" }, key, "<Nop>", opts)
+end
+
+map("n", "<leader>w", "<C-w>w", { desc = "Cycle windows" })
+map("n", "<leader>wh", "<C-w>h", { desc = "Window left" })
+map("n", "<leader>wj", "<C-w>j", { desc = "Window down" })
+map("n", "<leader>wk", "<C-w>k", { desc = "Window up" })
+map("n", "<leader>wl", "<C-w>l", { desc = "Window right" })
+map("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit" })
+map("n", "<leader>wq", "<cmd>wq<cr>", { desc = "Write and quit" })
+map("n", "<leader>s", "<cmd>w<cr>", { desc = "Write" })
+map("n", "<leader>ff", function()
+	require("telescope.builtin").find_files()
+end, { desc = "Find files" })
+map("n", "<leader>fg", function()
+	require("telescope.builtin").live_grep()
+end, { desc = "Live grep" })
+map("n", "<leader>fb", function()
+	require("telescope.builtin").buffers()
+end, { desc = "Find buffers" })
+map("n", "<leader>fd", function()
+	require("telescope.builtin").diagnostics()
+end, { desc = "Find diagnostics" })
+map("n", "<leader>li", "<cmd>LspStatus<cr>", { desc = "LSP status" })
+map("n", "<leader>lh", "<cmd>LspInlayHints<cr>", { desc = "Toggle LSP inlay hints" })
+map("n", "<leader>ls", function()
+	require("telescope.builtin").lsp_document_symbols()
+end, { desc = "LSP document symbols" })
+map("n", "<leader>fr", function()
+	require("telescope.builtin").lsp_references()
+end, { desc = "Find references" })
+map("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
+map("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical<cr>", { desc = "Vertical terminal" })
+
+map("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
+map({ "i", "t" }, "<A-h>", "<Left>", opts)
+map({ "i", "t" }, "<A-j>", "<Down>", opts)
+map({ "i", "t" }, "<A-k>", "<Up>", opts)
+map({ "i", "t" }, "<A-l>", "<Right>", opts)
+map("n", "<C-j>", "7j", opts)
+map("n", "<C-k>", "7k", opts)
